@@ -1,0 +1,50 @@
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Formulario de Inscripción de Equipos</title>
+    <style>
+        main{background: red;
+        }
+        main{background: blue;
+        }
+        form{
+            display: flex;
+            gap: 16px;
+            flex-direction: row;
+        }
+    </style>
+</head>
+<body>
+    <main id="main-inicio" class="Formulario">
+        <h1>Inscripción de Jugadores</h1>
+        <form>
+            <label>Carnet:<input type="number" id="carnet" name="Carnet" required></label>
+            <br>
+            <label>Nombre:<input type="text" id="name" name="Nombre" required></label>
+            <br>
+            <label>Fecha de nacimiento:<input type="date" id="fechanac" name="FechaNacimiento" required max="2010-07-23"></label>
+            <br>
+            <label>Correo:<input type="email" id="mail" name="Correo" required></label>
+            <br>
+            <label>Equipo:
+                <select id="Equipo" name="Equipo" required>
+                    <option value="Barcelona">Barcelona</option>
+                    <option value="Liverpool">Liverpool</option>
+                    <option value="Real Madrid">Real Madrid</option>
+                </select>
+            </label>
+            <br>
+            <label>Posición:
+                <select id="Posición" name="Posición" required>
+                    <option value="Portero">Portero</option>
+                    <option value="Defensa">Defensa</option>
+                    <option value="Mediocampista">Mediocampista</option>
+                    <option value="Delantero">Delantero</option>
+                </select>
+            </label>
+            <br><br>
+            <input type="submit" name="enviar" id="enviar">
+        </form>
+    </main>
+</body>
+</html>
