@@ -1,6 +1,18 @@
 <html lang="es">
     <head>
+        <meta charset="UTF-8">
         <title>Inicio | Gabriel Guillen</title>
+        <style>
+            main{background: red;
+            }
+            main{background: blue;
+            }
+            form{
+                display: flex;
+                gap: 16px;
+                flex-direction: row;
+            }
+        </style>
     </head>
     <body>
         <header>
@@ -16,13 +28,37 @@
                 </ul>
             </nav>
         </header>
-        <main>
+        <main id="main-inicio" class="Formulario">
             <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRAVENrMTFy8ogS92p13iL8ezOxQ3W7DQeYBYChYIhoPQiuy-j9JFZ-Db5x&s=10">
             <section>
-
-            </section>
-            <section>
-
+                <form>
+                    <label>Nombre:<input type="text" id="lastname" name="Apellido" required></label>
+                    <br>
+                    <label>Apellido:<input type="text" id="name" name="Nombre" required></label>
+                    <br>
+                    <label>Correo:<input type="email" id="mail" name="Correo" required></label>
+                    <br>
+                    <label>Teléfono:<input type="tel" id="phone" name="Teléfono" required></label>
+                    <br>
+                    <label>Servicio a seleccionar:
+                        <select id="Servicio" name="Servicio" required>
+                            <option value="Página Web">Página Web</option>
+                            <option value="Aplicación">Aplicación</option>
+                            <option value="Otros">Otros</option>
+                        </select>
+                    </label>
+                    <br>
+                    <label>Horario para contactarte:
+                        <select id="Horario" name="Horario" required>
+                            <option value="horario1">8:00 a 10:00 a.m.</option>
+                            <option value="horario2">10:00 a 12:00 p.m.</option>
+                            <option value="horario3">1:00 p.m. a 3:00 p.m.</option>
+                            <option value="horario4">3:00 p.m. a 5:00 p.m.</option>
+                        </select>
+                    </label>
+                    <br><br>
+                    <input type="submit" name="enviar" id="enviar">
+                </form>
             </section>
         </main>
         <footer>
