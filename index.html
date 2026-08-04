@@ -43,16 +43,20 @@
 
         .presentacion .info {
             overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
         }
 
         .presentacion .info h1 {
             text-align: center;
+            font-weight: bold;
+            font-size: 2.5em;
         }
 
         .presentacion .info h2 {
             color: #CE4257;
-            margin-top: 0;
-            font-size: 1em;
+            font-size: 0.7em;
             text-align: center;
         }
 
@@ -66,6 +70,11 @@
             font-weight: bold;
             text-decoration: none;
         }
+
+        .presentacion .description {
+            max-width: 500px;
+            color: #7A5560;
+        }
     </style>
 </head>
 <body>
@@ -78,14 +87,16 @@
             <div class="info">
                 <h2>ESTUDIANTE DE INGENIERÍA EN SISTEMAS</h2>
                 <h1>Gabriel Guillén</h1>
+                <div class="description">
+                    <p>
+                        Soy estudiante de Ingeniería en Sistemas de Información y Ciencias de la Computación.
+                        Me apasiona aprender, mejorar constantemente y contribuir con mi mejor desempeño en cada proyecto.
+                    </p>
+                </div>
                 <p>
-                    Soy estudiante de Ingeniería en Sistemas de Información y Ciencias de la Computación.
-                    Me apasiona aprender, mejorar constantemente y contribuir con mi mejor desempeño en cada proyecto.
-                </p>
-                <p>
-                    <a href="mailto:g2.gabriel@icloud.com">✉ g2.gabriel@icloud.com</a><br>
-                    <a href="https://www.linkedin.com/" target="_blank"> LinkedIn</a><br>
-                    <a href="https://github.com/" target="_blank"> GitHub</a>
+                    <button><a href="mailto:g2.gabriel@icloud.com">Escríbeme: g2.gabriel@icloud.com</a></button>
+                    <button><a href="https://www.linkedin.com/" target="_blank"> LinkedIn</a></button>
+                    <button><a href="https://github.com/" target="_blank"> GitHub</a></button>
                 </p>
             </div>
         </section>
