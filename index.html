@@ -1,71 +1,159 @@
+<!DOCTYPE html>
 <html lang="es">
-    <head>
-        <meta charset="UTF-8">
-        <title>Inicio | Gabriel Guillen</title>
-        <style>
-            main{background: red;
-            }
-            main{background: blue;
-            }
-            form{
-                display: flex;
-                gap: 16px;
-                flex-direction: row;
-            }
-        </style>
-    </head>
-    <body>
-        <header>
-            <h1>Gabriel Guillen</h1>
-            <nav>
-                <ul>
-                    <li>
-                        <a href="#">Proyectos</a>
-                    </li>
-                    <li>
-                        <a href="#">Contacto</a>
-                    </li>
-                </ul>
-            </nav>
-        </header>
-        <main id="main-inicio" class="Formulario">
-            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRAVENrMTFy8ogS92p13iL8ezOxQ3W7DQeYBYChYIhoPQiuy-j9JFZ-Db5x&s=10">
-            <section>
-                <form>
-                    <label>Nombre:<input type="text" id="lastname" name="Apellido" required></label>
-                    <br>
-                    <label>Apellido:<input type="text" id="name" name="Nombre" required></label>
-                    <br>
-                    <label>Correo:<input type="email" id="mail" name="Correo" required></label>
-                    <br>
-                    <label>Teléfono:<input type="tel" id="phone" name="Teléfono" required></label>
-                    <br>
-                    <label>Servicio a seleccionar:
-                        <select id="Servicio" name="Servicio" required>
-                            <option value="Página Web">Página Web</option>
-                            <option value="Aplicación">Aplicación</option>
-                            <option value="Otros">Otros</option>
-                        </select>
-                    </label>
-                    <br>
-                    <label>Horario para contactarte:
-                        <select id="Horario" name="Horario" required>
-                            <option value="horario1">8:00 a 10:00 a.m.</option>
-                            <option value="horario2">10:00 a 12:00 p.m.</option>
-                            <option value="horario3">1:00 p.m. a 3:00 p.m.</option>
-                            <option value="horario4">3:00 p.m. a 5:00 p.m.</option>
-                        </select>
-                    </label>
-                    <br><br>
-                    <input type="submit" name="enviar" id="enviar">
-                </form>
-            </section>
-        </main>
-        <footer>
+<head>
+    <meta charset="UTF-8">
+    <title>Inicio | Gabriel Guillén</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background: #f0f0f0;
+        }
 
-        </footer>
-        <script>
-            console.log("Hola Mundo")
-        </script>
-    </body>
+        header {
+            background: #4F000B;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 2em;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 10px 0 0 0;
+        }
+
+        nav ul li {
+            display: inline-block;
+            margin: 0 15px;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        main {
+            background: white;
+            max-width: 900px;
+            margin: 30px auto;
+            padding: 20px;
+            border-radius: 8px;
+        }
+
+        .presentacion {
+            overflow: hidden;
+            margin-bottom: 30px;
+        }
+
+        .presentacion img {
+            float: left;
+            margin-right: 20px;
+            border: 2px solid #4F000B;
+            border-radius: 8px;
+        }
+
+        .presentacion .info {
+            overflow: hidden;
+        }
+
+        .presentacion .info h2 {
+            color: #4F000B;
+            margin-top: 0;
+        }
+
+        .presentacion .info p {
+            font-size: 1.1em;
+        }
+
+        .presentacion .info a {
+            color: #4F000B;
+            font-weight: bold;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Gabriel Guillén</h1>
+        <nav>
+            <ul>
+                <li><a href="#">Proyectos</a></li>
+                <li><a href="#">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="presentacion">
+            <div class="info">
+                <h2>ESTUDIANTE DE INGENIERÍA EN SISTEMAS</h2>
+                <p>
+                    Soy estudiante de Ingeniería en Sistemas de Información y Ciencias de la Computación.
+                    Me apasiona aprender, mejorar constantemente y contribuir con mi mejor desempeño en cada proyecto.
+                </p>
+                <p>
+                    <a href="mailto:g2.gabriel@icloud.com">✉ g2.gabriel@icloud.com</a><br>
+                    <a href="https://www.linkedin.com/" target="_blank"> LinkedIn</a><br>
+                    <a href="https://github.com/" target="_blank"> GitHub</a>
+                </p>
+            </div>
+        </section>
+        <section>
+            <h3>Contáctame</h3>
+            <form>
+                <label>
+                    Nombre:
+                    <input type="text" id="name" name="Nombre" required>
+                </label>
+
+                <label>
+                    Apellido:
+                    <input type="text" id="lastname" name="Apellido" required>
+                </label>
+
+                <label>
+                    Correo:
+                    <input type="email" id="mail" name="Correo" required>
+                </label>
+
+                <label>
+                    Teléfono:
+                    <input type="tel" id="phone" name="Telefono" required>
+                </label>
+
+                <label>
+                    Servicio a seleccionar:
+                    <select id="Servicio" name="Servicio" required>
+                        <option value="Página Web">Página Web</option>
+                        <option value="Aplicación">Aplicación</option>
+                        <option value="Otros">Otros</option>
+                    </select>
+                </label>
+
+                <label>
+                    Horario para contactarte:
+                    <select id="Horario" name="Horario" required>
+                        <option value="horario1">8:00 a 10:00 a.m.</option>
+                        <option value="horario2">10:00 a 12:00 p.m.</option>
+                        <option value="horario3">1:00 p.m. a 3:00 p.m.</option>
+                        <option value="horario4">3:00 p.m. a 5:00 p.m.</option>
+                    </select>
+                </label>
+
+                <input type="submit" value="Enviar">
+            </form>
+        </section>
+    </main>
+    <script>
+        console.log("Hola Mundo");
+    </script>
+</body>
 </html>
