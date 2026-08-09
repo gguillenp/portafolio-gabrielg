@@ -2,83 +2,236 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Inicio | Gabriel Guillén</title>
     <style>
         body {
             margin: 0;
             padding: 0;
             background: #FFF8F6;
+            font-family: Arial, Helvetica, sans-serif;
         }
-
         header {
             background: #4F000B;
             color: white;
             padding: 20px;
             text-align: left;
         }
-
         header h2 {
             margin: 0px 0px 0px 10px;
             font-size: 1.2em;
         }
-
         main {
             background: #FFF8F6;
             margin: 30px auto;
             padding: 20px;
             border-radius: 8px;
         }
-
         .presentacion {
             overflow: hidden;
             margin-bottom: 30px;
         }
-
         .presentacion img {
             float: left;
             margin-right: 20px;
             border: 2px solid #4F000B;
             border-radius: 8px;
         }
-
         .presentacion .info {
             overflow: hidden;
             display: flex;
             flex-direction: column;
             align-items: center;
         }
-
         .presentacion .info h1 {
             text-align: center;
             font-weight: bold;
             font-size: 2.5em;
         }
-
         .presentacion .info h2 {
             color: #CE4257;
             font-size: 0.7em;
             text-align: center;
+            letter-spacing: 1px;
         }
-
         .presentacion .info p {
             font-size: 1.1em;
             text-align: center;
         }
-
-        .presentacion .info a {
-            color: #4F000B;
-            font-weight: bold;
-            text-decoration: none;
-        }
-
         .presentacion .description {
             max-width: 500px;
             color: #7A5560;
         }
+        .presentacion .info button {
+            border: none;
+            border-radius: 6px;
+            padding: 10px 16px;
+            margin: 10px 5px;
+            background: #4F000B;
+            cursor: pointer;
+        }
+        .presentacion .info button:first-child {
+            background: #F5793B;
+        }
+        .presentacion .info a {
+            color: white;
+            font-weight: bold;
+            text-decoration: none;
+        }
+        .presentacion .info button:first-child a {
+            color: white;
+        }
+        .sobre-mi {
+            max-width: 900px;
+            margin: 0 auto 40px auto;
+        }
+        .sobre-mi h3 {
+            font-size: 1.6em;
+            color: #4F000B;
+        }
+        .habilidades {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-top: 15px;
+        }
+        .habilidades span {
+            border: 1px solid #CE4257;
+            color: #CE4257;
+            padding: 6px 16px;
+            border-radius: 20px;
+            font-size: 0.9em;
+            background: white;
+        }
+        .proyectos {
+            max-width: 1000px;
+            margin: 0 auto 40px auto;
+        }
+        .proyectos h3 {
+            font-size: 1.6em;
+            color: #4F000B;
+        }
+        .proyectos-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            margin-top: 20px;
+        }
+        .proyecto-card {
+            background: white;
+            border: 1px solid #f0dcd8;
+            border-radius: 8px;
+            overflow: hidden;
+            width: 280px;
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+        }
+        .proyecto-card .imagen {
+            height: 160px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: bold;
+        }
+        .proyecto-card:nth-child(1) .imagen {
+            background: #5a6b7a;
+        }
+        .proyecto-card:nth-child(2) .imagen {
+            background: #d99aa5;
+        }
+        .proyecto-card:nth-child(3) .imagen {
+            background: #4F000B;
+        }
+        .proyecto-card .contenido {
+            padding: 15px;
+        }
+        .proyecto-card h4 {
+            margin: 0 0 8px 0;
+            color: #4F000B;
+        }
+        .proyecto-card p {
+            color: #7A5560;
+            font-size: 0.9em;
+            margin: 0 0 10px 0;
+        }
+        .tecnologias {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 6px;
+            margin-bottom: 12px;
+        }
+        .tecnologias span {
+            border: 1px solid #CE4257;
+            color: #CE4257;
+            padding: 3px 10px;
+            border-radius: 20px;
+            font-size: 0.75em;
+        }
+        .proyecto-card a.boton {
+            display: inline-block;
+            text-decoration: none;
+            color: white;
+            background: #F5793B;
+            padding: 8px 14px;
+            border-radius: 6px;
+            font-size: 0.85em;
+        }
+        .proyecto-card.proximamente {
+            display: flex;
+            flex-direction: column;
+        }
+        .proyecto-card.proximamente .contenido span {
+            display: inline-block;
+            border: 1px solid #CE4257;
+            color: #CE4257;
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 0.8em;
+        }
+        .contacto {
+            max-width: 500px;
+            margin: 0 auto 40px auto;
+        }
+        .contacto h3 {
+            font-size: 1.6em;
+            color: #4F000B;
+        }
+        form {
+            display: flex;
+            flex-direction: column;
+        }
+        form label {
+            margin: 10px 0 4px 0;
+            color: #4F000B;
+            font-weight: bold;
+        }
+        form input,
+        form select {
+            padding: 8px;
+            border: 1px solid #CE4257;
+            border-radius: 6px;
+            font-size: 1em;
+        }
+        form input[type="submit"] {
+            margin-top: 20px;
+            background: #F5793B;
+            color: white;
+            border: none;
+            padding: 12px;
+            border-radius: 6px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+        footer {
+            background: #4F000B;
+            color: white;
+            text-align: center;
+            padding: 15px;
+            font-size: 0.9em;
+        }
     </style>
 </head>
 <body>
-
     <header>
         <h2>Gabriel Guillén</h2>
     </header>
@@ -89,63 +242,97 @@
                 <h1>Gabriel Guillén</h1>
                 <div class="description">
                     <p>
-                        Soy estudiante de Ingeniería en Sistemas de Información y Ciencias de la Computación.
-                        Me apasiona aprender, mejorar constantemente y contribuir con mi mejor desempeño en cada proyecto.
+                        Soy estudiante de Ingeniería en Sistemas de Información y Ciencias de la Computación. Me apasiona aprender, mejorar constantemente y contribuir con mi mejor desempeño en cada proyecto.
                     </p>
                 </div>
                 <p>
                     <button><a href="mailto:g2.gabriel@icloud.com">Escríbeme: g2.gabriel@icloud.com</a></button>
-                    <button><a href="https://www.linkedin.com/" target="_blank"> LinkedIn</a></button>
-                    <button><a href="https://github.com/" target="_blank"> GitHub</a></button>
+                    <button><a href="https://www.linkedin.com/" target="_blank">LinkedIn</a></button>
+                    <button><a href="https://github.com/" target="_blank">GitHub</a></button>
                 </p>
             </div>
         </section>
-        <section>
+        <section class="sobre-mi">
+            <h3>Sobre mí</h3>
+            <div class="habilidades">
+                <span>Python</span>
+                <span>JavaScript</span>
+                <span>HTML/CSS</span>
+                <span>Data Science</span>
+                <span>APIs</span>
+                <span>Análisis de datos</span>
+            </div>
+        </section>
+        <section class="proyectos">
+            <h3>Proyectos</h3>
+            <div class="proyectos-grid">
+                <div class="proyecto-card">
+                    <div class="imagen">INVERA</div>
+                    <div class="contenido">
+                        <h4>Invera</h4>
+                        <p>Aplicación de escritorio para investigar y predecir el comportamiento de acciones bursátiles mediante modelos estadísticos.</p>
+                        <div class="tecnologias">
+                            <span>Python</span>
+                            <span>PyQt5</span>
+                            <span>Machine Learning</span>
+                        </div>
+                        <a class="boton" href="#" target="_blank">Ver proyecto</a>
+                    </div>
+                </div>
+                <div class="proyecto-card">
+                    <div class="imagen">NEEDLETEX</div>
+                    <div class="contenido">
+                        <h4>Needletex — Rediseño Web</h4>
+                        <p>Rediseño del sitio web corporativo de Needletex, empresa textil, mejorando su estructura, navegación y presentación visual.</p>
+                        <div class="tecnologias">
+                            <span>HTML</span>
+                            <span>CSS</span>
+                            <span>JavaScript</span>
+                        </div>
+                        <a class="boton" href="#" target="_blank">Ver proyecto</a>
+                    </div>
+                </div>
+                <div class="proyecto-card proximamente">
+                    <div class="imagen">?</div>
+                    <div class="contenido">
+                        <h4>Próximamente</h4>
+                        <p>Estoy trabajando en un nuevo proyecto. ¡Vuelve pronto para verlo!</p>
+                        <span>Próximamente</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="contacto">
             <h3>Contáctame</h3>
             <form>
-                <label>
-                    Nombre:
-                    <input type="text" id="name" name="Nombre" required>
-                </label>
-
-                <label>
-                    Apellido:
-                    <input type="text" id="lastname" name="Apellido" required>
-                </label>
-
-                <label>
-                    Correo:
-                    <input type="email" id="mail" name="Correo" required>
-                </label>
-
-                <label>
-                    Teléfono:
-                    <input type="tel" id="phone" name="Telefono" required>
-                </label>
-
-                <label>
-                    Servicio a seleccionar:
-                    <select id="Servicio" name="Servicio" required>
-                        <option value="Página Web">Página Web</option>
-                        <option value="Aplicación">Aplicación</option>
-                        <option value="Otros">Otros</option>
-                    </select>
-                </label>
-
-                <label>
-                    Horario para contactarte:
-                    <select id="Horario" name="Horario" required>
-                        <option value="horario1">8:00 a 10:00 a.m.</option>
-                        <option value="horario2">10:00 a 12:00 p.m.</option>
-                        <option value="horario3">1:00 p.m. a 3:00 p.m.</option>
-                        <option value="horario4">3:00 p.m. a 5:00 p.m.</option>
-                    </select>
-                </label>
-
+                <label for="name">Nombre:</label>
+                <input type="text" id="name" name="Nombre" required>
+                <label for="lastname">Apellido:</label>
+                <input type="text" id="lastname" name="Apellido" required>
+                <label for="mail">Correo:</label>
+                <input type="email" id="mail" name="Correo" required>
+                <label for="phone">Teléfono:</label>
+                <input type="tel" id="phone" name="Telefono" required>
+                <label for="Servicio">Servicio a seleccionar:</label>
+                <select id="Servicio" name="Servicio" required>
+                    <option value="Página Web">Página Web</option>
+                    <option value="Aplicación">Aplicación</option>
+                    <option value="Otros">Otros</option>
+                </select>
+                <label for="Horario">Horario para contactarte:</label>
+                <select id="Horario" name="Horario" required>
+                    <option value="horario1">8:00 a 10:00 a.m.</option>
+                    <option value="horario2">10:00 a 12:00 p.m.</option>
+                    <option value="horario3">1:00 p.m. a 3:00 p.m.</option>
+                    <option value="horario4">3:00 p.m. a 5:00 p.m.</option>
+                </select>
                 <input type="submit" value="Enviar">
             </form>
         </section>
     </main>
+    <footer>
+        <p>2026 Gabriel Guillén</p>
+    </footer>
     <script>
         console.log("Hola Mundo");
     </script>
